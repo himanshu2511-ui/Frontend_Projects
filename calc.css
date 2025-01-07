@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    width: calc(100% - 1em);
+    max-width: 250px;
+    max-height: 500px;
+    border: 1px solid #222;
+    border-radius: 0.8em;
+    overflow: hidden;
+}
+
+.calculator .history {
+    font-size: 0.75em;
+    text-align: right;
+    padding: 0.1em 0.2em;
+    color: #ddd;
+    height: 1.5em;
+}
+
+.calculator .output {
+    min-height: 100px;
+}
+
+.calculator .output input {
+    min-height: 100px;
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    text-align: right;
+    padding: 0.2em;
+    background: #111;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.calculator .grid {
+    padding: 0.75em;
+    display: grid;
+    gap: 0.75em;
+}
+
+.calculator .grid .row {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:0.5em;
+}
+.calculator .grid .row button{
+    aspect-ratio: 1/1;
+    font-size: 1.1em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(80,80,80,0.5);
+}
+.calculator .grid .row button.gray-btn{
+    background:#888;
+}
+.calculator .grid .row button.highlight-btn{
+    background: #ba5594;
+}
+.calculator .grid .row.last-row{
+grid-template-columns: 2fr 1fr 1fr;
+}
+.calculator .grid .row.last-row button:first-child{
+    height: 100%;
+    aspect-ratio: initial;
+    border-radius: 2.5em;
+    text-align: left;
+    padding-left: 1em;
+}
